@@ -1,0 +1,84 @@
+*,*::before,*::after{
+  box-sizing: border-box;
+}
+
+body{
+  font-family:'Roboto', 'Noto Sans TC', sans-serif;
+  line-height: 1.5;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+  img:hover{
+    opacity: 0.7;
+  }
+}
+
+img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+label, input, textarea{
+  display: block;
+  font-family:'Roboto', 'Noto Sans TC', sans-serif;
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 36px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  color: #FFF;
+  vertical-align: middle;
+}
+
+.container{
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 12px;
+  @include pad{
+      max-width: 944px; //720
+  }
+  @include mobile{
+      max-width: 528px;  //372
+  }
+}
+
+.pa96-80{
+  padding-top: 96px;
+  padding-bottom: 80px;
+  @include pad{
+    padding-top: 80px;
+  }
+  @include mobile{
+    padding-top: 40px;
+    padding-bottom: 64px;
+  }
+}
+
+.pa80{
+  padding-top: 80px;
+  padding-bottom: 80px;
+  @include mobile{
+      padding-top: 40px;
+      padding-bottom: 40px;
+  }
+}
+
+.mb48{
+  margin-bottom: 48px;
+  @include mobile{
+      margin-bottom: 24px;
+  }
+}
+

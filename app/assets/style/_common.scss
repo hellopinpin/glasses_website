@@ -1,0 +1,426 @@
+.common_heading{
+    padding-left: 16px;
+    margin-bottom: 32px;
+    border-left: 8px solid $red;
+    font-size: 48px;
+    font-weight: bold;
+    @include pad{
+        margin-top: 0;
+    }
+    @include mobile{
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+}
+
+.common_heading2{
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 24px;
+}
+
+
+.question_list{
+    &__item:not(:last-child){
+        padding-bottom: 32px;
+        @include mobile{
+            padding-bottom: 24px;
+        }
+    }
+    &__h{
+        font-weight: bold;
+        font-size: 20px;
+        padding-bottom: 8px;
+    }
+    &__p{
+        font-size: 16px;
+    }    
+}
+
+
+.store_form{
+    margin-bottom: 40px;
+    @include mobile{
+        margin-bottom: 24px;
+    }
+    &__label{
+        display: inline-block;
+        font-size: 24px;
+        vertical-align: middle;
+        @include mobile{
+            font-size: 16px;
+        }
+    }
+    &__select{
+        font-size: 18px;
+        color: #495057;
+        margin-left: 16px;
+        width: 304px;
+        border: 1px solid #CED4DA;
+        padding-left: 12px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        @include mobile{
+            max-width: 304px;
+            width: calc(100% - 77px);
+            margin-left: 8px;
+        }
+    }
+}
+
+.store_list{
+    font-family: 'Noto Sans TC', sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 48px 24px;
+    @include pad {
+        row-gap: 24px;
+    }
+    &__item{        
+        width: 31.6%;
+        @include pad {
+            width: 47.8%;
+        }
+        @include mobile {
+            width: 100%;
+        }
+        &_img{
+            width: 100%;
+            height: 224px;
+        }
+        &_text{
+            border: 1px solid #00000020;
+        }
+        &_h{
+            border-bottom: 1px solid #00000020;
+            font-size: 24px;
+            padding: 8px 24px;         
+        }
+        &_info{
+            font-size: 20px;
+            padding: 16px 24px;       
+        }
+        &_button{
+            display: block;
+            background: #000;
+            color: #FFF;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            text-align: center;
+            &:hover{
+                background: $red;
+            }
+        }
+    }  
+}
+
+.item_info__li{
+    text-indent: -13px;
+    margin-left: 31px;
+    a:hover{
+        color: #495057;
+    }
+}
+.item_info__li:not(:last-child){
+    margin-bottom: 8px;
+}
+
+.store_symbols{
+    color: #000;
+    font-size: 18px;
+    margin-right: 8px;
+    vertical-align: inherit;
+}
+
+.branch{
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    @include pad{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    &_info{
+        width: 46%;
+        @include pad{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            gap: 24px;
+        }
+        @include mobile{
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 0;
+        }
+        &__img,&__text{
+            @include pad{
+                width: calc( (100% - 24px) /2 );
+            }
+            @include mobile{
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+.blog_article__list {
+    margin-bottom: 44px;
+    @include pad{
+        margin-bottom: 0;
+    }  
+    &_item:not(:last-child){
+        margin-bottom: 60px;
+        @include pad{
+            margin-bottom: 24px;
+        }
+    }
+    
+    .list_item {        
+        &__link {
+            display: flex;
+            gap: 24px;
+            * :hover,* :hover::after {
+                text-decoration: underline;
+            }
+            
+            @include mobile{
+                gap: 8px;
+                flex-direction: column;
+            }
+        }
+        &__img { 
+            width: calc((100% - 24px) / 2);
+            @include mobile{
+                width: 100%;
+            }
+        }
+        &__text {
+            width: calc((100% - 24px) / 2);
+            position: relative;
+            @include mobile{
+                width: 100%;
+            }
+        }         
+        &__heading {
+            color: $red-d;
+            font-size: 32px;
+            @include pad{
+                font-size: 24px;
+            }
+        }
+        &__sub {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+        &__sub_h {
+            font-size: 20px;
+            @include pad {
+                font-size: 16px;
+            }
+        }
+        &__date {
+            font-size: 16px;
+        }
+        &__content {
+            font-size: 20px;
+            text-align: justify;
+            color: #555555;
+            @include pad {
+                font-size: 16px;
+            }
+            @include mobile{
+                display: none;
+            }
+        }
+        
+        &__content::after{
+            content:'MORE';
+            font-size: 36px;
+            color: $red-d;
+            font-weight: 900;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            @include pad{
+                position: static;
+                font-weight: normal;
+                font-size: inherit;
+                color: inherit;
+                text-transform: lowercase; //大小寫
+            }
+        }
+    }
+}
+
+.article{
+    padding-bottom: 80px;
+    @include mobile{
+        padding-bottom: 64px;
+    }
+    a:hover{
+        text-decoration: underline;        
+    }
+    &__refer{
+        margin-top: 24px;
+        font-size: 16px;
+        @include pad{
+            margin-top: 8px;
+        }
+        @include mobile{
+            margin-top: 16px;
+        }
+        a{
+            color: $red;            
+        }
+    }
+    &__tags_list{
+        margin: 8px 0;
+        display: flex;
+        gap: 15px;
+    }
+    &__tags{
+        font-size: 24px;
+        font-weight: bold;
+        color: $red;
+        @include mobile{
+            font-size: 16px;
+        }
+    }
+    &__body{
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+    }    
+    
+    &__content{
+        width: 66.04%;
+        @include pad{
+            width: 69.35%;
+        }
+        @include mobile{
+            width: 100%;
+        }
+        &_h1{
+            font-size: 48px;
+            @include mobile{
+                font-size: 24px;
+            }        
+        }
+        &_h2{
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 16px;
+            @include pad{
+                margin-bottom: 24px;
+            }
+            @include mobile{
+                font-size: 16px;
+                margin-bottom: 16px;
+            }
+        }
+        img{
+            margin-bottom: 8px;
+            @include pad{
+                margin-bottom: 16px;                
+            }
+            @include mobile{
+                margin-bottom: 8px;
+            }
+        }
+        p{
+            font-size: 16px;
+            color: #555555;
+            margin-bottom: 40px;
+            text-align: justify;
+            @include pad{
+                margin-bottom: 24px;
+            }
+            @include mobile{
+                margin-bottom: 16px;
+            }
+        }
+    }
+    &__aside{
+        width: calc(100% - 66.04% - 24px);
+        @include pad{
+            width: calc(100% - 69.35% - 24px);
+        }
+        @include mobile{
+            display: none;
+        }
+        &_icon{
+            color: $red;
+            font-weight: bold;
+            vertical-align: text-top;
+            @include pad{
+                font-size: 19px;
+            }
+        }
+        &_h{
+            font-size: 32px;
+            color: $red;
+            font-weight: bold;
+            margin-bottom: 4px;
+            @include pad{
+                font-size: 16px;
+                margin-bottom: 8px;
+            }
+        }
+        &_list{            
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px 24px;
+        }
+        .article__tags{
+            font-size: 24px;
+            margin-bottom: 4px;
+            @include pad {
+                font-size: 16px;
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__footer{
+        width: 66.04%;
+        @include pad{
+            width: 100%;
+        }
+        @include mobile{
+            display: none;
+        }
+    }
+    &__share{
+        font-size: 16px;
+        font-weight: bold;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #707070;
+        margin-bottom: 24px;
+        display: flex;
+        gap: 16px;
+        &_list{            
+            display: flex;
+            justify-content: flex-start;
+            gap: 16px;
+            img{
+                width: 24px;
+            }
+        }        
+    }
+    &__nav{
+        display: flex;
+        justify-content: space-between;
+        &_item{
+            display: flex;
+            gap: 12px;
+        }      
+        &_icon{
+            color: inherit;
+            font-size: 24px;
+        }
+    }
+}

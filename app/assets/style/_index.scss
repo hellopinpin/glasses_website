@@ -1,0 +1,300 @@
+.index_h2{
+    font-size: 48px;
+    color: $red-d;
+    text-align: center;
+    font-weight: bold;
+    @include pad{
+        font-size: 6.25vw;
+    }
+    @include mobile{
+        font-size: 24px;
+    }
+}
+
+.h3r{            
+    text-align: center;
+    font-size: 48px;             
+    color: $red;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.index_banner{    
+    height: 787px;
+    background: url(../images/home-header.png) no-repeat center/cover;
+    @include pad{
+        height: 102.47vw;
+        background: url(../images/home-header-sm.png) no-repeat center/cover;
+    }
+    @include mobile{
+        height: 105.07vw;
+    }
+    .container{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        text-align: right;
+    }
+    p{
+        font-size: 36px;
+        color: $red-d;
+        @include pad{
+            font-size: 4.69vw;
+        }
+        @include mobile{
+            font-size: 16px;
+        }
+    }
+    &_h{
+        font-size: 64px;
+        font-weight: bold;
+        color: $red-d;
+        margin-bottom: 4px;
+        @include pad{
+            font-size: 8.33vw;
+        }
+        @include mobile{
+            font-size: 24px;
+        }
+    }
+    &_button{
+        background: $red;
+        color: #FFF;
+        font-size: 20px;
+        padding: 6px 12px;
+        &:hover{
+            background: #fff;
+            color: $red;
+            border: 2px solid $red;
+            padding: 4px 12px;
+        }
+    }
+}
+
+.feature{
+    background: $rice;
+    .index_h2{
+        margin-bottom: 24px;
+    }
+    &__list{
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        
+        @include pad{
+            flex-wrap: wrap;
+            justify-content: center; //b
+            // gap: 3.13vw; //b
+        }
+        @include mobile{
+            gap: 24px;
+        }
+    }
+    .list__item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 25%;
+        @include pad{
+            // width: 48.275%; //b
+            width: 46%; //b
+        }
+        @include mobile{
+            width: 100%;
+        }
+        &_img{
+            width: 84px;
+        }
+        &_h{
+            font-size: 24px;
+            color: $red-d;
+            font-weight: bold;
+            margin-top: 16px;
+            margin-bottom: 8px;
+        }
+        &_p{
+            font-size: 16px;
+        }
+    }
+}
+
+.classic_series{    
+    &__list{
+        display: flex;
+        gap: 24px;
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: center;
+        @include pad{
+            flex-direction: column;
+            align-items: center;
+        }        
+    }
+    .list__item{
+        width: 31.68%;
+        @include pad{
+            width: 100%;
+        }
+        &_img{
+            margin: 0 auto;
+            @include pad{
+                width: 48.27%;
+            }
+            @include mobile{
+                width: 100%;
+            }
+        }        
+        &_h{   
+            margin-top: 8px;
+        }
+    }
+}
+
+.co_branded_series{
+    background: url('../images/index-bg.png') no-repeat center/cover;
+    .index_h2{
+        color: #fff;;
+    }
+    &__list{
+        display: flex;
+        @include pad{
+            flex-direction: column;
+        };
+    }
+    .list__item{
+        &_h{
+            background: #fff;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+    }
+    &__img{
+        width: 100%;
+        height: 240px;
+        @include mobile{
+            display: none;
+        }
+    }
+    &__img-sm{
+        display: none;
+        @include mobile{
+            display: block;
+        }
+    }
+}
+
+.good_review{
+    &__list{
+        display: flex;
+        gap: 24px;
+        @include pad{
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    .list__item{
+        background: #FFF;
+        box-shadow: 0px 2px 6px #00000029;
+        border-radius: 4px;
+        font-family: 'Noto Sans TC', sans-serif;   
+        @include pad{
+            width: 46.59%;
+        }
+        @include mobile{
+            width: 100%;
+        }  
+        &_content{
+            height: 205px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            &_h{
+                font-size: 16px;
+                font-weight: 500;
+                margin-bottom: 8px;
+            }
+            &_p_review{
+                font-size: 16px;
+            }
+            &_p_date{
+                font-size: 14px;
+                color: #707070;
+                position: absolute;
+                bottom: 16px;
+            }
+        }
+    }
+}
+
+.contact_us{
+    background: $rice;
+    .container{
+        max-width: 660px;
+        @include pad{
+            max-width: 600px;
+        }
+    }
+    &__p{
+        margin-bottom: 24px;
+        @include pad{
+            font-size: 16px;
+        }
+    }    
+    &__form{
+        font-size: 16px;
+        label,input,textarea{
+            margin-left: auto;
+            margin-right: auto;  
+            resize: none;
+        }
+        label{
+            margin-bottom: 8px;
+        }
+        input:not([id="agree"]),textarea{
+            margin-bottom: 16px;
+            padding: 6px 12px;
+            width: 99%;
+            background: transparent;
+            border: 1px solid #000;
+        }
+
+        label[for="agree"]{
+            text-indent: -22px;
+            margin-left: 24px;
+        }
+        input[id="agree"]{
+            display: inline;
+            width: 17px;
+            height: 17px;
+            vertical-align: text-top;
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-right: 4px;
+        }
+        input[type="submit"]{
+            background: $red;
+            color: #FFF;
+            width: 416px;
+            padding: 16px 0;
+            border: none;
+            margin: 0 auto;
+            margin-top: 48px;
+            @include pad{
+                width: 336px;
+            }
+            @include mobile{
+                width: 100%;
+            }
+            &:hover{
+                background: #fff;
+                color: $red;
+                border: 2px solid $red;
+                padding: 14px 0;
+            }
+        }
+        
+    }
+}
