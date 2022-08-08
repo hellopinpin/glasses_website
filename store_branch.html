@@ -6,12 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="icon" href="./assets/images/logo-white.ico">
-  <title><%- title %> - Glasses</title>  
+  <title>門市據點 - 選擇分店 - Glasses</title>  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Roboto:ital,wght@0,400;0,500;1,900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <link rel="stylesheet" href="./assets/style/all.css">
+  
+  
 </head>
 
 <body>
@@ -34,15 +36,35 @@
     </div>
   </header>
   
-  <nav class="goods_nav">
-      <ul class="goods_nav__list">
-        <li class="list__item"><a href="goods_optical.html">OPTICAL</a></li>
-        <li class="list__item"><a href="goods_sunglasses.html">SUNGLASSES</a></li>
-        <li class="list__item"><a href="#">FUNCTIONAL</a></li>
-      </ul>
-  </nav>
-  
-  <%- contents %>
+  <main>
+    <section class="container pa96-80">
+        <h1 class="common_heading">門市據點</h1>
+        <form action="#" class="store_form">
+            <label for="branch_select" class="store_form__label">選擇分店</label>
+            <select name="branch" id="branch_select" class="store_form__select">
+                <option value="branch01">台北中山旗艦店</option>
+                <option value="branch02">台北綠園店</option>
+                <option value="branch03">台中清水旗艦店</option>
+                <option value="branch04">高雄中正形象店</option>
+                <option value="branch05">高雄夢時代店</option>
+            </select>
+        </form>
+        <div class="branch">
+            <div class="store_list__item branch_info">
+                <img src="./assets/images/storepage-1.png" alt="store1" class="store_list__item_img branch_info__img">
+                <div class="store_list__item_text branch_info__text">
+                    <h2 class="store_list__item_h">台北中山旗艦店</h2>
+                    <ul class="store_list__item_info">
+                        <li class="item_info__li"><span class="store_symbols material-symbols-outlined">call</span>電話：<a href="tel:+020001234">(02)000-1234</a></li>
+                        <li class="item_info__li"><span class="store_symbols material-symbols-outlined">schedule</span>營業時間：10:00-21:00</li>
+                        <li class="item_info__li"><span class="store_symbols material-symbols-outlined">location_on</span>地址：台北市中山區南京東路25巷2-1號</li>
+                    </ul>
+                </div>
+            </div>
+            <img src="./assets/images/map.png" alt="branch_info__map" class="branch_map">
+        </div> 
+    </section>
+<main>
   
   <footer class="footer">
     <div class="container">
